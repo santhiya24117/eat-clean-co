@@ -1,0 +1,6 @@
+{
+  "name": "Eat Clean Co. | Modern Health Food Café JP Nagar",
+  "description": "Eat Clean Co. serves wholesome, fresh and satisfying food in JP Nagar, Bengaluru — from smoothie bowls and quinoa meals to overnight oats, soups and guilt-free desserts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

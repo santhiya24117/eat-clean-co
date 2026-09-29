@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --color-canvas: #F7F4EC;
+  --color-canvas-subtle: #E9E6D8;
+  --color-forest: #26382D;
+  --color-charcoal: #191B18;
+  --color-sage: #89957D;
+  --color-sand: #D8CBB5;
+  --color-terracotta: #B56F43;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F7F4EC;
+  color: #191B18;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+/* Global Consistent Responsive Section Container */
+.site-container {
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .site-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .site-container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+/* Fluid Typography Utilities using CSS clamp */
+.fluid-hero-title {
+  font-size: clamp(2.5rem, 6.5vw, 5.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.fluid-section-title {
+  font-size: clamp(2rem, 4vw, 3.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+.fluid-stat-number {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1;
+}
+
+.fluid-card-title {
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  line-height: 1.25;
+}
+
+/* Editorial Serif Utility */
+.font-editorial {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+/* Custom horizontal scroll bar styling */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Clean touch target */
+.touch-target {
+  min-height: 44px;
+}
+
+/* Hide mobile scrollbars */
+@media (max-width: 768px) {
+  html, body, #root {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  ::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+/* Selection */
+::selection {
+  background-color: #26382D;
+  color: #F7F4EC;
+}
